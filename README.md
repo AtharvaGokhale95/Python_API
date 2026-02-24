@@ -2,7 +2,7 @@
 
 Flask and FastAPI are Python Web Frameworks used to build APIs.
 
-## Drawbacks with Flask:
+## Drawbacks with Flask
 
 1. Slower than FastAPI
 2. Less efficient with async programming
