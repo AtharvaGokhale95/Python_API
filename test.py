@@ -7,7 +7,8 @@ class AvailableCuisine(str, Enum):
     indian = "indian"
     italian = "italian"
     american = "american"
-    
+
+# This dictionary maps the Enum members to their respective dishes. By using Enums, we can ensure that only valid cuisine types are accepted, and FastAPI will automatically generate documentation for the available options.
 Cuisine = {
     AvailableCuisine.indian: ["Butter Chicken", "Naan", "Biryani"],
     AvailableCuisine.italian: ["Pizza", "Pasta", "Tiramisu"],
@@ -33,5 +34,15 @@ async def get_items(cuisine: AvailableCuisine): # The parameter 'cuisine' is of 
     return {"cuisine": cuisine.value, # The 'value' attribute of the Enum member will give the actual string value (e.g., "indian", "italian", "american") instead of the Enum member name (e.g., AvailableCuisine.indian).
         "dishes": Cuisine[cuisine]}
 
+# This dictionary is a simple mapping of coupon codes to their respective discounts
+coupon_code = {
+    1: '10%',
+    2: '20%',
+    3: '30%'
+}
+@app.get("/get_discount/{code}")
+async def get_discount(code: int):
+    return {"code": code,
+            "discount": coupon_code.get(code, "Invalid code")}
 
 
