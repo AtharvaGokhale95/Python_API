@@ -28,18 +28,19 @@ Cuisine = {
 #     return food_items.get(cuisine, "Cuisine not found")
 # We get only the values for defined cuisines, and if we try to access an undefined cuisine, we get a "Cuisine not found" message. However, this approach does not provide automatic validation or documentation for the available cuisines.
 
-
-# @app.get("/get_items/{cuisine}")
-async def get_items(cuisine: AvailableCuisine): # The parameter 'cuisine' is of type 'AvailableCuisine', which is an Enum (fixed set of constant values). FastAPI will automatically validate the input against the Enum values.
-    return {"cuisine": cuisine.value, # The 'value' attribute of the Enum member will give the actual string value (e.g., "indian", "italian", "american") instead of the Enum member name (e.g., AvailableCuisine.indian).
-        "dishes": Cuisine[cuisine]}
-
 # This dictionary is a simple mapping of coupon codes to their respective discounts
 coupon_code = {
     1: '10%',
     2: '20%',
     3: '30%'
 }
+
+# @app.get("/get_items/{cuisine}")
+async def get_items(cuisine: AvailableCuisine): # The parameter 'cuisine' is of type 'AvailableCuisine', which is an Enum (fixed set of constant values). FastAPI will automatically validate the input against the Enum values.
+    return {"cuisine": cuisine.value, # The 'value' attribute of the Enum member will give the actual string value (e.g., "indian", "italian", "american") instead of the Enum member name (e.g., AvailableCuisine.indian).
+        "dishes": Cuisine[cuisine]}
+
+# The get_discount function demonstrates how to use a simple dictionary to retrieve discount information based on a coupon code. It does not leverage Enums, so it does not provide automatic validation or documentation for the available coupon codes. If an invalid code is provided, it returns "Invalid code".
 @app.get("/get_discount/{code}")
 async def get_discount(code: int):
     return {"code": code,
