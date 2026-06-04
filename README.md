@@ -27,7 +27,7 @@ Example:
 7. Use JSON as the standard format for request and response bodies.
 8. Use versioning in the API URL to manage changes and updates (e.g., /v1/users).
 
-## FastAPI: A modern, fast (high-performance) web framework for building APIs with Python 3.6+ based on standard Python type hints. It is designed to be easy to use and to provide high performance, making it a popular choice for building RESTful APIs in Python.
+## FastAPI: A modern, fast (high-performance) web framework for building APIs with Python 3.6+ based on standard Python type hints. It is designed to be easy to use and to provide high performance, making it a popular choice for building RESTful APIs in Python
 
 ## REST Vs FastAPI
 
@@ -38,4 +38,4 @@ Example:
 ## Analogy of REST API vs FastAPI
 
 1. REST is like a blueprint for building a house, while FastAPI is like the actual construction company that builds the house based on that blueprint. The blueprint (REST) provides the design and structure, while the construction company (FastAPI) implements that design to create a functional house (API).
-2. REST is traffic rules and FAST API is the car that follows those rules. REST provides the guidelines for how data should be structured and accessed, while FastAPI is the tool that allows developers to create APIs that adhere to those guidelines efficiently and effectively.
+2. REST is traffic rules and FAST API is the car that follows those rules. REST provides the guidelines for how data should be structured and accessed, while FastAPI is the tool that allows developers to create APIs that adhere to those guidelines efficiently and effectively
