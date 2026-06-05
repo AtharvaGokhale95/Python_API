@@ -10,7 +10,9 @@
     ],
     "cSpell.words": [
         "Biryani",
+        "Gunicorn",
         "Pydantic",
-        "Starlette"
+        "Starlette",
+        "Uvicorn"
     ]
 }
