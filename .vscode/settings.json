@@ -9,6 +9,8 @@
         }
     ],
     "cSpell.words": [
-        "Biryani"
+        "Biryani",
+        "Pydantic",
+        "Starlette"
     ]
 }
